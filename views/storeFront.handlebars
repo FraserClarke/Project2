@@ -1,26 +1,23 @@
 <div class="row product">
-    {{!-- <div class="col-auto products"> --}}
-        {{#each products}}
-        {{#unless addToCart}}
-        <div class="col-auto card" id="item-card" style="width: 18rem;">
-            <img class="card-img-top" src="{{dataValues.product_url}}" alt="Card image cap" />
-            <div class="card-body">
-                <h5 class="card-title">{{dataValues.product_name}}</h5>
-                <p class="card-text">
-                    {{dataValues.product_description}}
-                </p>
-                <p class="card-text">{{dataValues.selling_price}}
-                </p>
-                <p class="card-text">Only {{dataValues.inventory}} left!</p>
-                <button class="btn cartBtnH btn-primary" data-id="{{dataValues.id}}" data-newcartitem="{{cartAdd}}">Add
-                    to
-                    Cart</button>
-            </div>
+    {{#each products}}
+    {{#unless addToCart}}
+    <div class="col-auto card" id="item-card" style="width: 18rem;">
+        <img class="card-img-top" src="{{dataValues.product_url}}" alt="Card image cap" />
+        <div class="card-body">
+            <h5 class="card-title">{{dataValues.product_name}}</h5>
+            <p class="card-text">
+                {{dataValues.product_description}}
+            </p>
+            <p class="card-text">{{dataValues.selling_price}}
+            </p>
+            <p class="card-text">Only {{dataValues.inventory}} left!</p>
+            <button class="btn cartBtnH btn-primary" data-id="{{dataValues.id}}" data-newcartitem="{{cartAdd}}">Add
+                to
+                Cart</button>
         </div>
-        {{/unless}}
-        {{/each}}
-        {{!--
-    </div> --}}
+    </div>
+    {{/unless}}
+    {{/each}}
 </div>
 
 <script src="js/storeFront.js"></script>

@@ -133,12 +133,7 @@ router.post("/createAccount", (req, res) => {
       customers[0].last_name = lastName;
       customers[0].businessOwner = false;
       return res.redirect(301, "/storefront");
-
-      //   res.json({ response: "Registration Complete. Continue to login please" });
-      //   //     // also create authToken and cookies authToken
-      //   return;
     }
-    // res.json({ response: "Password does not match" });
     customers[0].isValid = false;
     customers[0].client_type = "wrongPass";
     customers[0].user_password = "";
@@ -170,9 +165,6 @@ router.get("/createAccount", (req, res) => {
 
 router.get("/storeFront", (req, res) => {
   db.Products.findAll().then(data => {
-    // if (customers[0].id) {
-    //   customers[0].id = "";
-    // }
     if (customers) {
       customers.push({
         id: "",
@@ -187,8 +179,6 @@ router.get("/storeFront", (req, res) => {
       include: [db.Products, db.Customer]
     }).then(order => {
       const obj = data;
-      // console.log(obj);
-      // console.log(order);
       const cartItem = [];
       order.forEach(item => {
         cartItem.push({
@@ -211,7 +201,6 @@ router.get("/storeFront", (req, res) => {
 router.get("/inventory", (req, res) => {
   db.Products.findAll().then(data => {
     const obj = data;
-    // console.log(obj);
     console.log(customers[0]);
     res.render("inventory", {
       customerInfo: customers[0],
@@ -241,7 +230,6 @@ router.get("/salesDash", (req, res) => {
           parseInt(i.dataValues.quantity)
       });
     });
-    // console.log(obj);
     console.log(customers[0]);
     res.render("salesDash", {
       customerInfo: customers[0],
@@ -251,26 +239,5 @@ router.get("/salesDash", (req, res) => {
     });
   });
 });
-
-/* Authentication starts below
-router.get("/", (req, res) => {
-  res.render("home");
-});
-router.get("/createAccount", (req, res) => {
-  res.render("createAccount");
-});
- */
-
-// router.get("/salesDash", (req, res) => {
-//   if (req.customer) {
-//     res.render("/salesDash");
-//     console.log("reached");
-//   } else {
-//     res.render("/login", {
-//       message: "Please login to continue",
-//       messageClass: "alert-danger"
-//     });
-//   }
-// });
 
 module.exports = router;

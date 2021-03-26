@@ -1,45 +1,43 @@
 <div class="indexRow">
-  {{!-- <div class="col-auto"> --}}
-    <form id="create-form">
-      <div class="create-form">
-        <label for="first-name">First Name</label>
-        <input name="firstName" type="text" class="form-control" id="first-name" placeholder="First Name" />
+  <form id="create-form">
+    <div class="create-form">
+      <label for="first-name">First Name</label>
+      <input name="firstName" type="text" class="form-control" id="first-name" placeholder="First Name" />
 
-        <label for="last-name">Last Name</label>
-        <input name="lastName" type="text" class="form-control" id="last-name" placeholder="Last Name" />
+      <label for="last-name">Last Name</label>
+      <input name="lastName" type="text" class="form-control" id="last-name" placeholder="Last Name" />
 
-        <label for="email-address">Email address</label>
-        <input name="email" type="email" class="form-control" id="email-address" aria-describedby="emailHelp"
-          placeholder="Enter email" />
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      <label for="email-address">Email address</label>
+      <input name="email" type="email" class="form-control" id="email-address" aria-describedby="emailHelp"
+        placeholder="Enter email" />
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 
-        <label for="passwordInput">Password</label>
-        <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password" />
+      <label for="passwordInput">Password</label>
+      <input name="password" type="password" class="form-control" id="passwordInput" placeholder="Password" />
 
-        <label for="confirmPasswordInput">Re-Enter Password</label>
-        <input name="confirmPassword" type="password" class="form-control" id="confirmPasswordInput"
-          placeholder="Password" />
+      <label for="confirmPasswordInput">Re-Enter Password</label>
+      <input name="confirmPassword" type="password" class="form-control" id="confirmPasswordInput"
+        placeholder="Password" />
 
-        <label>
-          <input name="businessSelect" type="checkbox" class="form-check-label" id="businessSelect"
-            data-toggle="collapse" href="#business-toggle" role="checkbox" aria-expanded="false"
-            aria-controls="business-toggle"> Are you a Business Owner?
-        </label>
+      <label>
+        <input name="businessSelect" type="checkbox" class="form-check-label" id="businessSelect" data-toggle="collapse"
+          href="#business-toggle" role="checkbox" aria-expanded="false" aria-controls="business-toggle"> Are you a
+        Business Owner?
+      </label>
 
-        <div class="collapse" id="business-toggle">
-          <label for="business-name">Business Name</label>
-          <input type="text" class="form-control" id="business-name" placeholder="Business Name" />
+      <div class="collapse" id="business-toggle">
+        <label for="business-name">Business Name</label>
+        <input type="text" class="form-control" id="business-name" placeholder="Business Name" />
 
-          <label for="phone-number">Phone Number</label>
-          <input type="text" class="form-control" id="phone-number" placeholder="Phone Number" />
-        </div>
-        <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a type="button" class="btn btn-outline-dark" id="createAcctBtn" href="/">Back to Login
-          <i class="fas fa-sign-in-alt"></i></a>
+        <label for="phone-number">Phone Number</label>
+        <input type="text" class="form-control" id="phone-number" placeholder="Phone Number" />
       </div>
-    </form>
-  </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a type="button" class="btn btn-outline-dark" id="createAcctBtn" href="/">Back to Login
+        <i class="fas fa-sign-in-alt"></i></a>
+    </div>
+  </form>
 </div>
 
 <script src="js/create.js"></script>

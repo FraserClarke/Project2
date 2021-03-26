@@ -26,7 +26,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: true,
       defaultValue: null
     },
-    // change to client-type & values = "customer", "business-owner"?
     client_type: {
       type: DataTypes.ENUM,
       values: ["customer", "business-owner"],

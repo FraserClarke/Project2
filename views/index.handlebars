@@ -1,27 +1,26 @@
 <div class="indexRow">
-  {{!-- <div class="col-auto"> --}}
-    <h3 id="login-head">Login</h3>
+  <h3 id="login-head">Login</h3>
 
-    <form id="login-form">
-      <div class="form-group">
-        <label for="email-address" id="email-address1">Email address</label>
-        <input name="email" type="email" id="email-address" class="form-control" aria-describedby="emailHelp"
-          placeholder="Enter email">
-        <label for="passwordInput" id="passwordInput1">Password</label>
-        <input name="password" type="password" id="passwordInput" class="form-control" placeholder="Password"><br>
+  <form id="login-form">
+    <div class="form-group">
+      <label for="email-address" id="email-address1">Email address</label>
+      <input name="email" type="email" id="email-address" class="form-control" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <label for="passwordInput" id="passwordInput1">Password</label>
+      <input name="password" type="password" id="passwordInput" class="form-control" placeholder="Password"><br>
 
-        <p>{{message}}</p>
-        <p>{{message2}}</p>
+      <p>{{message}}</p>
+      <p>{{message2}}</p>
 
-        <br>
-        <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
-        <a type="button" class="btn btn-outline-dark" id="createAcctBtn" href="/createAccount"><i
-            class="fas fa-user-plus"></i>
-          Create Account</a>
+      <br>
+      <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+      <a type="button" class="btn btn-outline-dark" id="createAcctBtn" href="/createAccount"><i
+          class="fas fa-user-plus"></i>
+        Create Account</a>
 
-      </div>
-    </form>
-  </div>
+    </div>
+  </form>
+</div>
 </div>
 
 <script src="js/login.js"></script>
